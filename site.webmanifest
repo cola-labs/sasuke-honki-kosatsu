@@ -1,0 +1,21 @@
+{
+  "name": "SASUKE World Cup 2026 Analysis",
+  "short_name": "SASUKE WC 2026",
+  "start_url": "./",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#040b11",
+  "background_color": "#040b11",
+  "display": "standalone"
+}
