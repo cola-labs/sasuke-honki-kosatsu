@@ -1447,14 +1447,67 @@ body{
 }
 </style>
 
+
+<style>
+/* Header INDEX — トップページと統一 */
+.desktop-nav{display:none!important}
+.menu-button.index-button{
+  display:block!important;
+  margin-left:auto;
+  padding:8px 0;
+  border:0;
+  background:transparent;
+  color:var(--cyan);
+  font:800 18px ui-monospace,monospace;
+  letter-spacing:.10em;
+  cursor:pointer;
+}
+.menu-button.index-button:hover,
+.menu-button.index-button:focus-visible{
+  color:var(--cyan2);
+  outline:none;
+}
+.mobile-nav{
+  top:70px;
+  z-index:40;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-height:calc(100vh - 70px);
+  overflow:auto;
+  padding:20px 32px 28px;
+  background:rgba(4,11,17,.98);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+.mobile-nav a{
+  padding:14px 16px;
+  border-color:rgba(49,216,239,.20);
+  background:rgba(8,23,34,.62);
+}
+.mobile-nav a:hover,
+.mobile-nav a:focus-visible{
+  border-color:var(--cyan);
+  color:var(--cyan);
+  outline:none;
+}
+@media(max-width:820px){
+  .menu-button.index-button{font-size:16px}
+  .mobile-nav{
+    top:64px;
+    grid-template-columns:1fr 1fr;
+    padding:16px 20px 24px;
+    max-height:calc(100vh - 64px);
+  }
+}
+@media(max-width:540px){
+  .mobile-nav{grid-template-columns:1fr}
+}
+</style>
+
 </head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="topbar">
 <a class="brand" href="../../" aria-label="SASUKE 本気考察 トップページへ"><i></i><span>SASUKE 本気考察</span></a>
-<nav aria-label="ページ内ナビゲーション" class="desktop-nav">
-<a href="#about">このサイトについて</a><a href="#conclusion">現時点の結論</a><a href="#teams">8チーム比較</a><a href="#stages">ステージ別</a><a href="#players">全32選手</a><a href="#scenarios">シナリオ</a><a href="#method">評価・出典</a>
-</nav>
-<button aria-controls="mobileNav" aria-expanded="false" class="menu-button" id="menuButton">INDEX</button>
+<button aria-controls="mobileNav" aria-expanded="false" class="menu-button index-button" id="menuButton">INDEX</button>
 </header>
 <nav aria-label="モバイルナビゲーション" class="mobile-nav" id="mobileNav">
 <a href="#about">このサイトについて</a><a href="#conclusion">現時点の結論</a><a href="#rules">大会の勝負構造</a><a href="#teams">8チーム比較</a><a href="#team-detail">チーム別考察</a><a href="#stages">1st〜FINAL</a><a href="#players">全32選手</a><a href="#scenarios">配点・構成別</a><a href="#wc2024">2024完全結果</a><a href="#method">評価方法・出典</a>
