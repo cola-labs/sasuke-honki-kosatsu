@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cola-labs.github.io/sasuke-honki-kosatsu/sitemap.xml
