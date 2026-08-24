@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <!--
-  MAIN PRE-ACTUAL HOLD
-  Status: ACTUAL SEALED / UNLISTED / NO RESULT DATA
+  WC2026 RESULT REVIEW — HUMAN REVIEW BUILD
+  Status: POST-EVENT / ACTUAL FROZEN / PRED-003 CLOSED_WITH_HOLDS
+  Publication state: NOINDEX / UNLISTED until human approval
 -->
 <html class="no-js" lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="放送前に凍結したSASUKE WORLD CUP 2026のOLD MODELとNEW FRAMEWORK SHADOWを、放送後に実際の結果と並べて検証するData Lab型ページのACTUAL PENDING事前配置版。">
+  <meta name="description" content="放送前に凍結したSASUKE WORLD CUP 2026のOLD MODELとNEW FRAMEWORK SHADOWを、実際の結果と並べて検証するData Lab型の答え合わせページ。">
   <meta name="theme-color" content="#040b11">
   <meta name="color-scheme" content="dark">
   <meta name="author" content="SASUKE 本気考察">
   <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:title" content="SASUKE WORLD CUP 2026 予測、答え合わせ。｜ACTUAL PENDING">
-  <meta property="og:description" content="OLD MODEL、NEW FRAMEWORK SHADOW、ACTUALを並べて検証する結果レビュー。現在はACTUAL PENDINGの事前配置版です。">
+  <meta property="og:title" content="SASUKE WORLD CUP 2026 予測、答え合わせ。">
+  <meta property="og:description" content="OLD MODEL、NEW FRAMEWORK SHADOW、ACTUALを並べて検証。どこが当たり、どこが外れ、なぜそうなったのかを見る。">
   <meta property="og:image" content="https://cola-labs.github.io/sasuke-honki-kosatsu/assets/ogp-default.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -24,25 +26,44 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://cola-labs.github.io/sasuke-honki-kosatsu/assets/ogp-default.png">
   <meta name="twitter:image:alt" content="SASUKE 本気考察">
-  <!-- PREBUILD: canonical / og:url / structured data / analytics are intentionally omitted until publication approval. -->
+
+  <!-- HUMAN REVIEW BUILD:
+       canonical / og:url / analytics / sitemap / root-hub link are intentionally omitted
+       until public publication approval.
+  -->
+
   <link rel="icon" href="/sasuke-honki-kosatsu/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/sasuke-honki-kosatsu/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/sasuke-honki-kosatsu/assets/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/sasuke-honki-kosatsu/assets/apple-touch-icon.png">
   <link rel="manifest" href="/sasuke-honki-kosatsu/site.webmanifest">
-  <title>SASUKE WORLD CUP 2026 予測、答え合わせ。｜ACTUAL PENDING</title>
+
+  <title>SASUKE WORLD CUP 2026 予測、答え合わせ。</title>
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
   <style>
     :root{
-      --bg:#040b11;--bg2:#07131d;--panel:#0a1b28;--panel2:#0d2231;
-      --cyan:#31d8ef;--cyan2:#9af4ff;--text:#effaff;--muted:#8ba6b5;
-      --line:#244b5d;--amber:#f1b557;--violet:#bca8ff;--green:#71e6a7;
+      --bg:#040b11;
+      --bg2:#07131d;
+      --panel:#0a1b28;
+      --panel2:#0d2231;
+      --cyan:#31d8ef;
+      --cyan2:#9af4ff;
+      --text:#effaff;
+      --muted:#8ba6b5;
+      --line:#244b5d;
+      --amber:#f1b557;
+      --violet:#bca8ff;
+      --green:#71e6a7;
+      --red:#ff8f9c;
       --max:1120px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%}
     body{
-      margin:0;overflow-x:hidden;color:var(--text);
+      margin:0;
+      overflow-x:hidden;
+      color:var(--text);
       font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic UI",system-ui,sans-serif;
       background:
         linear-gradient(rgba(49,216,239,.025) 1px,transparent 1px),
@@ -54,49 +75,100 @@
     a{color:inherit;text-decoration:none}
     button{font:inherit}
     .shell{width:min(var(--max),calc(100% - 64px));margin:auto}
-    .skip-link{position:fixed;left:12px;top:12px;z-index:1000;min-height:44px;padding:11px 14px;background:var(--cyan);color:#031019;font-weight:800;transform:translateY(-170%);transition:transform .16s}
+    .skip-link{
+      position:fixed;left:12px;top:12px;z-index:1000;
+      min-height:44px;padding:11px 14px;background:var(--cyan);color:#031019;
+      font-weight:800;transform:translateY(-170%);transition:transform .16s
+    }
     .skip-link:focus{transform:translateY(0)}
-    .topbar{height:70px;position:sticky;top:0;z-index:40;padding:0 32px;display:flex;align-items:center;gap:24px;border-bottom:1px solid rgba(36,75,93,.76);background:rgba(4,11,17,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+
+    .topbar{
+      height:70px;position:sticky;top:0;z-index:40;padding:0 32px;
+      display:flex;align-items:center;gap:24px;
+      border-bottom:1px solid rgba(36,75,93,.76);
+      background:rgba(4,11,17,.9);
+      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
+    }
     .topbar:after{content:"";position:absolute;left:32px;bottom:-1px;width:44px;height:3px;background:var(--cyan)}
     .brand{min-height:44px;display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.025em;white-space:nowrap}
     .brand i{width:11px;height:11px;border:2px solid var(--cyan);transform:rotate(45deg);box-shadow:0 0 18px rgba(49,216,239,.35)}
     .brand span{font-size:16px}
-    .menu-button{min-width:72px;min-height:44px;margin-left:auto;padding:8px;border:1px solid transparent;background:transparent;color:var(--cyan);font:800 14px ui-monospace,monospace;letter-spacing:.1em;cursor:pointer}
+    .menu-button{
+      min-width:72px;min-height:44px;margin-left:auto;padding:8px;border:1px solid transparent;
+      background:transparent;color:var(--cyan);font:800 14px ui-monospace,monospace;letter-spacing:.1em;cursor:pointer
+    }
     .menu-button:hover,.menu-button:focus-visible{border-color:var(--line);outline:0}
-    .mobile-nav{display:none;position:fixed;z-index:39;top:70px;left:0;right:0;padding:16px 20px 24px;background:rgba(4,11,17,.98);border-bottom:1px solid var(--line);grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .mobile-nav{
+      display:none;position:fixed;z-index:39;top:70px;left:0;right:0;padding:16px 20px 24px;
+      background:rgba(4,11,17,.98);border-bottom:1px solid var(--line);
+      grid-template-columns:repeat(3,minmax(0,1fr));gap:8px
+    }
     .mobile-nav.open{display:grid}
-    .mobile-nav a{min-height:44px;padding:12px;display:flex;align-items:center;border:1px solid rgba(49,216,239,.2);background:rgba(8,23,34,.62);font-size:11px;color:#c6d9e4}
+    .mobile-nav a{
+      min-height:44px;padding:12px;display:flex;align-items:center;
+      border:1px solid rgba(49,216,239,.2);background:rgba(8,23,34,.62);
+      font-size:11px;color:#c6d9e4
+    }
     .mobile-nav a:hover,.mobile-nav a:focus-visible{border-color:var(--cyan);color:var(--cyan);outline:0}
-    .hero{padding:68px 0 64px}
-    .eyebrow{display:inline-flex;padding:8px 12px;border:1px solid rgba(49,216,239,.62);color:var(--cyan);background:rgba(49,216,239,.035);font:800 9px ui-monospace,monospace;letter-spacing:.16em}
+
+    .hero{padding:68px 0 58px}
+    .eyebrow{
+      display:inline-flex;padding:8px 12px;border:1px solid rgba(49,216,239,.62);
+      color:var(--cyan);background:rgba(49,216,239,.035);
+      font:800 9px ui-monospace,monospace;letter-spacing:.16em
+    }
     .filecode{margin:18px 0 12px;color:#607d8d;font:700 9px ui-monospace,monospace;letter-spacing:.18em}
     .hero h1{margin:0;font-size:clamp(42px,5.2vw,68px);line-height:1.03;letter-spacing:-.045em;font-weight:780}
     .hero h1 em{display:inline-block;margin-top:10px;color:var(--cyan2);font-style:normal;font-size:.58em;letter-spacing:.02em}
-    .hero-lead{max-width:760px;margin:22px 0 0;color:#a9c0cc;font-size:clamp(14px,1.3vw,17px);line-height:1.9}
+    .hero-lead{max-width:780px;margin:22px 0 0;color:#a9c0cc;font-size:clamp(14px,1.3vw,17px);line-height:1.9}
     .status-line{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
     .status-line span{padding:8px 11px;border:1px solid rgba(36,75,93,.72);color:#708c9b;font:700 8.5px ui-monospace,monospace;letter-spacing:.05em}
-    .status-line b{color:var(--amber)}
+    .status-line b{color:var(--green)}
+    .status-line .review b{color:var(--amber)}
+
     .hero-compare{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
-    .hero-card{min-width:0;padding:20px;border:1px solid rgba(49,216,239,.2);background:linear-gradient(145deg,rgba(10,27,40,.86),rgba(5,16,24,.8));box-shadow:inset 3px 0 var(--card-color,var(--cyan))}
+    .hero-card{
+      min-width:0;padding:20px;border:1px solid rgba(49,216,239,.2);
+      background:linear-gradient(145deg,rgba(10,27,40,.86),rgba(5,16,24,.8));
+      box-shadow:inset 3px 0 var(--card-color,var(--cyan))
+    }
     .hero-card.new{--card-color:var(--violet)}
-    .hero-card.actual{--card-color:var(--amber);border-style:dashed}
+    .hero-card.actual{--card-color:var(--amber)}
     .card-label{display:flex;justify-content:space-between;gap:10px;color:var(--card-color,var(--cyan));font:800 8px ui-monospace,monospace;letter-spacing:.14em}
     .card-label small{color:var(--muted);letter-spacing:.05em}
-    .hero-card h2{margin:18px 0 4px;font-size:25px;line-height:1.2;letter-spacing:-.025em}
+    .hero-card h2{margin:18px 0 4px;font-size:27px;line-height:1.2;letter-spacing:-.025em}
     .hero-card p{margin:0;color:var(--muted);font-size:10px;line-height:1.7}
     .hero-card p b{color:#cde1ea;font-weight:700}
-    .section{padding:74px 0 82px;scroll-margin-top:70px}
-    .band{border-top:1px solid rgba(36,75,93,.78);border-bottom:1px solid rgba(36,75,93,.78);background:linear-gradient(180deg,rgba(8,22,33,.62),rgba(4,11,17,.9))}
-    .section-title{display:grid;grid-template-columns:minmax(190px,.62fr) minmax(0,1.38fr);gap:42px;align-items:start;margin-bottom:28px}
+    .actual-result{color:var(--amber)!important}
+
+    .section{padding:72px 0 80px;scroll-margin-top:70px}
+    .band{
+      border-top:1px solid rgba(36,75,93,.78);
+      border-bottom:1px solid rgba(36,75,93,.78);
+      background:linear-gradient(180deg,rgba(8,22,33,.62),rgba(4,11,17,.9))
+    }
+    .section-title{
+      display:grid;grid-template-columns:minmax(190px,.62fr) minmax(0,1.38fr);
+      gap:42px;align-items:start;margin-bottom:28px
+    }
     .section-title>span{grid-column:1;color:var(--cyan);font:800 9px ui-monospace,monospace;letter-spacing:.18em}
     .section-title h2{grid-column:1;margin:8px 0 0;font-size:clamp(28px,3.1vw,40px);line-height:1.15;letter-spacing:-.03em;font-weight:760}
     .section-title h2:after{content:"";display:block;width:42px;height:1px;margin-top:16px;background:var(--cyan)}
-    .section-title>p{grid-column:2;grid-row:1/3;margin:0;max-width:650px;padding-top:2px;color:#8fa9b7;font-size:13px;line-height:1.85}
-    .funnel{display:flex;align-items:center;justify-content:center;gap:13px;margin-bottom:14px;padding:17px;border:1px solid rgba(49,216,239,.18);background:rgba(7,20,31,.56);font:850 clamp(17px,2.8vw,28px) ui-monospace,monospace}
+    .section-title>p{grid-column:2;grid-row:1/3;margin:0;max-width:690px;padding-top:2px;color:#8fa9b7;font-size:13px;line-height:1.85}
+
+    .funnel{
+      display:flex;align-items:center;justify-content:center;gap:13px;margin-bottom:14px;padding:17px;
+      border:1px solid rgba(49,216,239,.18);background:rgba(7,20,31,.56);
+      font:850 clamp(17px,2.8vw,28px) ui-monospace,monospace
+    }
     .funnel i{color:var(--cyan);font-style:normal}
     .funnel small{display:block;margin-left:12px;color:var(--muted);font-size:9px;letter-spacing:.08em}
+
     .split-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .split-card{padding:19px;border:1px solid rgba(49,216,239,.17);background:linear-gradient(145deg,rgba(10,27,40,.8),rgba(5,16,24,.76))}
+    .split-card{
+      padding:19px;border:1px solid rgba(49,216,239,.17);
+      background:linear-gradient(145deg,rgba(10,27,40,.8),rgba(5,16,24,.76))
+    }
     .split-card header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(36,75,93,.62)}
     .split-card header span{color:var(--cyan);font:850 13px ui-monospace,monospace}
     .split-card header b{color:var(--muted);font:750 8px ui-monospace,monospace;letter-spacing:.08em}
@@ -106,10 +178,15 @@
     .difference small{display:block;margin-bottom:6px;color:var(--muted);font:750 8px ui-monospace,monospace}
     .difference strong{font-size:13px;line-height:1.45}
     .difference i{display:flex;align-items:center;justify-content:center;color:var(--cyan);font-style:normal;font-weight:900}
-    .pending-row{margin:10px 0 0;color:var(--amber);font:750 9px ui-monospace,monospace}
+    .actual-row{margin:10px 0 0;padding:10px 12px;border-left:2px solid var(--amber);background:rgba(241,181,87,.035);color:#d9e7ed;font-size:10.5px;line-height:1.6}
+    .actual-row b{color:var(--amber)}
+
     .review-shell{padding:18px;border:1px solid rgba(49,216,239,.2);background:linear-gradient(145deg,rgba(10,27,40,.82),rgba(5,16,24,.78))}
     .stage-tablist{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-    .stage-tab{min-height:44px;padding:10px 8px;border:1px solid var(--line);background:#07131e;color:var(--muted);font:850 10px ui-monospace,monospace;letter-spacing:.06em;cursor:pointer}
+    .stage-tab{
+      min-height:44px;padding:10px 8px;border:1px solid var(--line);background:#07131e;color:var(--muted);
+      font:850 10px ui-monospace,monospace;letter-spacing:.06em;cursor:pointer
+    }
     .stage-tab[aria-selected="true"]{border-color:var(--cyan);background:rgba(49,216,239,.08);color:var(--cyan2)}
     .stage-tab:hover,.stage-tab:focus-visible{border-color:var(--cyan);outline:0}
     .stage-panel{padding-top:12px}
@@ -118,71 +195,213 @@
     .stage-heading h3{margin:0;font-size:23px;letter-spacing:-.025em}
     .stage-heading p{margin:0;color:var(--muted);font:750 8px ui-monospace,monospace}
     .comparison-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-    .forecast-card{min-width:0;padding:17px;border:1px solid rgba(49,216,239,.16);background:rgba(3,13,20,.42);box-shadow:inset 2px 0 var(--tone,var(--cyan))}
+    .forecast-card{
+      min-width:0;padding:17px;border:1px solid rgba(49,216,239,.16);
+      background:rgba(3,13,20,.42);box-shadow:inset 2px 0 var(--tone,var(--cyan))
+    }
     .forecast-card.new{--tone:var(--violet)}
-    .forecast-card.actual{--tone:var(--amber);border-style:dashed}
+    .forecast-card.actual{--tone:var(--amber)}
     .forecast-card h4{margin:0 0 13px;color:var(--tone,var(--cyan));font:850 9px ui-monospace,monospace;letter-spacing:.12em}
     .chip-list{display:flex;flex-wrap:wrap;gap:6px}
     .team-chip{padding:7px 9px;border:1px solid rgba(49,216,239,.22);background:rgba(49,216,239,.035);color:#d8e9f0;font-size:10px;line-height:1.25}
-    .pending-value{min-height:33px;display:flex;align-items:center;color:var(--amber);font-size:11px}
-    .placeholder-banner{margin-bottom:12px;padding:14px 16px;border:1px dashed rgba(241,181,87,.5);background:rgba(241,181,87,.035);color:var(--amber);font:800 9px ui-monospace,monospace;letter-spacing:.07em}
-    .evaluation-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-    .evaluation-card{min-height:96px;padding:15px;border:1px solid rgba(49,216,239,.15);background:rgba(7,20,31,.56)}
-    .evaluation-card span{color:var(--cyan);font:800 8px ui-monospace,monospace;letter-spacing:.08em}
-    .evaluation-card h3{margin:12px 0 0;font-size:13px;line-height:1.5}
+    .forecast-card.actual .team-chip{border-color:rgba(241,181,87,.3);background:rgba(241,181,87,.035)}
+    .winner-chip{font-size:18px;font-weight:800;color:var(--amber)}
+    .stage-note{margin-top:10px;color:#829ba8;font-size:10px;line-height:1.7}
+
+    .score-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .score-card{
+      padding:20px;border:1px solid rgba(49,216,239,.17);
+      background:linear-gradient(145deg,rgba(10,27,40,.8),rgba(5,16,24,.76))
+    }
+    .score-card.new{border-color:rgba(188,168,255,.25)}
+    .score-card h3{margin:0 0 16px;font-size:20px}
+    .score-card h3 span{display:block;margin-bottom:6px;color:var(--cyan);font:800 8px ui-monospace,monospace;letter-spacing:.13em}
+    .score-card.new h3 span{color:var(--violet)}
+    .metric-list{display:grid;gap:8px}
+    .metric{
+      display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;
+      padding:12px;border:1px solid rgba(36,75,93,.58);background:rgba(3,13,20,.35)
+    }
+    .metric p{margin:0;color:#c6d9e4;font-size:12px}
+    .metric strong{font:850 16px ui-monospace,monospace}
+    .metric .hit{color:var(--green)}
+    .metric .miss{color:var(--red)}
+    .score-foot{margin:13px 0 0;color:var(--muted);font-size:10px;line-height:1.7}
+
+    .result-block{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .result-panel{
+      padding:18px;border:1px solid rgba(49,216,239,.16);background:rgba(7,20,31,.56)
+    }
+    .result-panel h3{margin:0 0 12px;font-size:18px}
+    .result-panel h3 small{display:block;margin-bottom:6px;color:var(--cyan);font:800 8px ui-monospace,monospace;letter-spacing:.12em}
+    .ranking{display:grid;gap:7px}
+    .rank-row{
+      display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:center;
+      min-height:46px;padding:10px 11px;border:1px solid rgba(36,75,93,.52);background:rgba(3,13,20,.32)
+    }
+    .rank-row .rank{color:var(--cyan);font:850 11px ui-monospace,monospace}
+    .rank-row strong{font-size:12px}
+    .rank-row b{color:var(--amber);font:850 12px ui-monospace,monospace}
+    .final-duel{display:grid;gap:8px}
+    .duel-row{
+      padding:14px;border:1px solid rgba(36,75,93,.52);background:rgba(3,13,20,.32)
+    }
+    .duel-row.winner{border-color:rgba(113,230,167,.4);box-shadow:inset 2px 0 var(--green)}
+    .duel-row .team{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font:800 8px ui-monospace,monospace;letter-spacing:.08em}
+    .duel-row h4{margin:10px 0 2px;font-size:17px}
+    .duel-row p{margin:0;color:#c6d9e4;font:850 20px ui-monospace,monospace}
+
+    .finding-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .finding-card{
+      min-height:210px;padding:19px;border:1px solid rgba(49,216,239,.16);
+      background:linear-gradient(145deg,rgba(10,27,40,.78),rgba(5,16,24,.74))
+    }
+    .finding-card .tag{display:inline-flex;padding:5px 7px;border:1px solid rgba(49,216,239,.3);color:var(--cyan);font:800 8px ui-monospace,monospace;letter-spacing:.09em}
+    .finding-card h3{margin:13px 0 8px;font-size:18px;line-height:1.35}
+    .finding-card p{margin:0;color:#9eb5c1;font-size:11px;line-height:1.8}
+    .finding-card p + p{margin-top:8px}
+    .finding-card b{color:#dcebf1}
+    .finding-card .conf{display:block;margin-top:12px;color:var(--muted);font:750 8px ui-monospace,monospace;letter-spacing:.08em}
+
     .reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-    .reason-card{min-height:134px;padding:18px;border:1px solid rgba(49,216,239,.16);background:linear-gradient(145deg,rgba(10,27,40,.78),rgba(5,16,24,.74))}
+    .reason-card{
+      min-height:158px;padding:18px;border:1px solid rgba(49,216,239,.16);
+      background:linear-gradient(145deg,rgba(10,27,40,.78),rgba(5,16,24,.74))
+    }
     .reason-card span{color:var(--cyan);font:800 8px ui-monospace,monospace;letter-spacing:.1em}
     .reason-card h3{margin:13px 0 8px;font-size:16px;line-height:1.35}
     .reason-card p{margin:0;color:var(--muted);font-size:10px;line-height:1.7}
+    .reason-card strong{display:block;margin-top:9px;color:#d7e9ef;font-size:11px;line-height:1.55}
+    .reason-card.zero{border-color:rgba(113,230,167,.28)}
+    .reason-card.zero span{color:var(--green)}
+
+    .learning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .learning-card{
+      padding:18px;border:1px solid rgba(49,216,239,.16);background:rgba(7,20,31,.56)
+    }
+    .learning-card h3{margin:0 0 8px;font-size:16px}
+    .learning-card p{margin:0;color:var(--muted);font-size:10.5px;line-height:1.75}
+    .learning-card small{display:block;margin-top:11px;color:var(--amber);font:750 8px ui-monospace,monospace}
+
     .premise-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0;padding:0;list-style:none}
-    .premise-list li{min-height:72px;padding:16px 17px 16px 45px;position:relative;border:1px solid rgba(49,216,239,.16);background:rgba(7,20,31,.56);color:#a9c0cc;font-size:11px;line-height:1.65}
+    .premise-list li{
+      min-height:72px;padding:16px 17px 16px 45px;position:relative;
+      border:1px solid rgba(49,216,239,.16);background:rgba(7,20,31,.56);
+      color:#a9c0cc;font-size:11px;line-height:1.65
+    }
     .premise-list li:before{content:"✓";position:absolute;left:17px;top:17px;color:var(--cyan);font-weight:900}
+
+    .closing{
+      margin-top:22px;padding:20px;border:1px solid rgba(49,216,239,.24);
+      background:linear-gradient(90deg,rgba(49,216,239,.055),rgba(188,168,255,.035))
+    }
+    .closing strong{display:block;margin-bottom:8px;color:var(--cyan2);font-size:14px}
+    .closing p{margin:0;color:#a9c0cc;font-size:11px;line-height:1.8}
+
     .footer{border-top:1px solid var(--line);padding:34px 0 40px;background:#040b11}
     .footer strong{font-size:14px;font-weight:720}
     .footer p{margin:7px 0 0;color:var(--muted);font-size:9.5px;line-height:1.7}
-    #back-top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:60;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:rgba(4,11,17,.84);color:var(--muted);font-size:16px;font-weight:900;line-height:1;cursor:pointer;backdrop-filter:blur(12px);opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .18s,transform .18s}
+
+    #back-top{
+      position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));
+      z-index:60;width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+      border:1px solid var(--line);background:rgba(4,11,17,.84);color:var(--muted);
+      font-size:16px;font-weight:900;line-height:1;cursor:pointer;backdrop-filter:blur(12px);
+      opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .18s,transform .18s
+    }
     #back-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+
     @media(max-width:820px){
       .topbar{height:64px;padding:0 20px}.topbar:after{left:20px}.brand span{font-size:14px}
       .mobile-nav{top:64px;grid-template-columns:1fr 1fr}.shell{width:calc(100% - 32px)}
-      .hero{padding:42px 0 56px}.hero-compare{grid-template-columns:1fr 1fr}.hero-card.actual{grid-column:1/-1}
-      .section{padding:62px 0 70px;scroll-margin-top:64px}.section-title{grid-template-columns:1fr;gap:12px;margin-bottom:22px}
-      .section-title>span,.section-title h2,.section-title>p{grid-column:1;grid-row:auto}.section-title>p{padding-top:0;font-size:12px}
-      .comparison-cards{grid-template-columns:1fr}.evaluation-grid{grid-template-columns:1fr 1fr}.reason-grid{grid-template-columns:1fr 1fr}
+      .hero{padding:42px 0 52px}.hero-compare{grid-template-columns:1fr 1fr}.hero-card.actual{grid-column:1/-1}
+      .section{padding:62px 0 70px;scroll-margin-top:64px}
+      .section-title{grid-template-columns:1fr;gap:12px;margin-bottom:22px}
+      .section-title>span,.section-title h2,.section-title>p{grid-column:1;grid-row:auto}
+      .section-title>p{padding-top:0;font-size:12px}
+      .comparison-cards{grid-template-columns:1fr}
+      .score-grid,.result-block,.finding-grid,.learning-grid{grid-template-columns:1fr}
+      .reason-grid{grid-template-columns:1fr 1fr}
     }
     @media(max-width:560px){
       body{background-size:32px 32px,32px 32px,auto,auto}.shell{width:calc(100% - 28px)}
-      .mobile-nav{grid-template-columns:1fr}.hero{padding-top:34px}.hero h1{font-size:clamp(37px,11vw,48px)}
-      .hero-lead{font-size:13px;line-height:1.75}.hero-compare{gap:7px;margin-top:22px}.hero-card{padding:15px}
-      .hero-card h2{margin-top:13px;font-size:20px}.hero-card p{font-size:9px}.hero-card.actual{padding-top:14px;padding-bottom:14px}
-      .section-title h2{font-size:28px}.funnel{gap:8px;justify-content:flex-start;overflow:hidden}.funnel small{display:none}
+      .mobile-nav{grid-template-columns:1fr}
+      .hero{padding-top:34px}.hero h1{font-size:clamp(37px,11vw,48px)}
+      .hero-lead{font-size:13px;line-height:1.75}
+      .hero-compare{gap:7px;margin-top:22px}.hero-card{padding:15px}
+      .hero-card h2{margin-top:13px;font-size:20px}.hero-card p{font-size:9px}
+      .section-title h2{font-size:28px}
+      .funnel{gap:8px;justify-content:flex-start;overflow:hidden}.funnel small{display:none}
       .split-grid{grid-template-columns:1fr}.difference{grid-template-columns:1fr 24px 1fr}.difference div{padding:10px}
       .review-shell{padding:12px}.stage-tablist{gap:5px}.stage-tab{padding:8px 4px;font-size:9px}
       .stage-heading h3{font-size:20px}.stage-heading p{display:none}.forecast-card{padding:14px}
-      .evaluation-grid,.reason-grid,.premise-list{grid-template-columns:1fr}.evaluation-card{min-height:82px}.reason-card{min-height:0}
+      .reason-grid,.premise-list{grid-template-columns:1fr}.reason-card{min-height:0}
+      .rank-row{grid-template-columns:28px minmax(0,1fr) auto}
     }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+    }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">本文へ移動</a>
+
   <header class="topbar">
-    <a class="brand" href="../../" aria-label="SASUKE 本気考察 トップページへ"><i></i><span>SASUKE 本気考察</span></a>
+    <a class="brand" href="../../" aria-label="SASUKE 本気考察 トップページへ">
+      <i></i><span>SASUKE 本気考察</span>
+    </a>
     <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileNav">INDEX</button>
   </header>
+
   <nav class="mobile-nav" id="mobileNav" aria-label="ページ内メニュー">
-    <a href="#divergence">予測の分岐</a><a href="#review">OLD / NEW / ACTUAL</a><a href="#evaluation">答え合わせ</a><a href="#reasons">外れた理由</a><a href="#premises">検証の前提</a>
+    <a href="#divergence">予測の分岐</a>
+    <a href="#review">OLD / NEW / ACTUAL</a>
+    <a href="#score">答え合わせ</a>
+    <a href="#actual">実際の結果</a>
+    <a href="#findings">何が起きた？</a>
+    <a href="#reasons">外れた理由</a>
+    <a href="#learning">今回の学び</a>
+    <a href="#premises">検証の前提</a>
   </nav>
 
   <main id="main-content" tabindex="-1">
     <section class="hero shell" aria-labelledby="page-title">
       <span class="eyebrow">POST EVENT REVIEW / DATA LAB</span>
-      <p class="filecode">WC2026 / RESULT REVIEW / PRE-ACTUAL HOLD</p>
+      <p class="filecode">WC2026 / RESULT REVIEW / HUMAN REVIEW BUILD</p>
       <h1 id="page-title">SASUKE WORLD CUP 2026<br><em>予測、答え合わせ。</em></h1>
-      <p class="hero-lead">放送前に凍結したOLD MODELとNEW FRAMEWORK SHADOWを、実際の結果と並べて検証する。</p>
-      <div class="status-line"><span>STATUS <b>ACTUAL PENDING</b></span><span>STATE <b>UNLISTED</b></span><span>OUTCOME EXPOSURE <b>0</b></span></div>
-      <div class="hero-compare" id="heroCompare" aria-label="OLD MODEL、NEW FRAMEWORK、ACTUALの概要"></div>
+      <p class="hero-lead">
+        放送前に凍結したOLD MODELとNEW FRAMEWORK SHADOWを、実際の結果と並べて検証する。
+        「当たった／外れた」だけでなく、どこで予測が分かれ、実際には何が起きたのかまで見る。
+      </p>
+
+      <div class="status-line">
+        <span>ACTUAL <b>FROZEN</b></span>
+        <span>VALIDATION <b>COMPLETE</b></span>
+        <span>PRED-003 <b>CLOSED_WITH_HOLDS</b></span>
+        <span class="review">PUBLICATION <b>HUMAN REVIEW</b></span>
+      </div>
+
+      <div class="hero-compare" aria-label="OLD MODEL、NEW FRAMEWORK、ACTUALの概要">
+        <article class="hero-card">
+          <div class="card-label"><span>OLD MODEL</span><small>FROZEN PRE-EVENT</small></div>
+          <h2>日本Red</h2>
+          <p>Winner prediction<br><b>Finalists: USA / 日本Red</b></p>
+        </article>
+
+        <article class="hero-card new">
+          <div class="card-label"><span>NEW FRAMEWORK</span><small>FROZEN SHADOW</small></div>
+          <h2>Australia</h2>
+          <p>Winner outlook<br><b>Finalists: USA / Australia</b></p>
+        </article>
+
+        <article class="hero-card actual">
+          <div class="card-label"><span>ACTUAL</span><small>FROZEN POST-EVENT</small></div>
+          <h2 class="actual-result">USA</h2>
+          <p>Champion<br><b>Finalists: USA / 日本Red</b></p>
+        </article>
+      </div>
     </section>
 
     <section class="section band" id="divergence" aria-labelledby="divergence-title">
@@ -190,10 +409,62 @@
         <header class="section-title">
           <span>SECTION 01 / FROZEN SPLIT</span>
           <h2 id="divergence-title">放送前、予測は<br>ここで分かれた</h2>
-          <p>8チームから、1ST突破6、2ND突破4、FINAL進出2、優勝1へ。OLDとNEWの差だけを、放送前のFreezeどおりに表示する。</p>
+          <p>
+            8チームから、1ST突破6、2ND突破4、FINAL進出2、優勝1へ。
+            OLDとNEWの差を、放送前にFreezeしたままActualと照合する。
+          </p>
         </header>
-        <div class="funnel" aria-label="大会進行 8チームから優勝1チーム"><strong>8</strong><i>→</i><strong>6</strong><i>→</i><strong>4</strong><i>→</i><strong>2</strong><i>→</i><strong>1</strong><small>TEAMS / 1ST / 2ND / FINAL / WINNER</small></div>
-        <div class="split-grid" id="splitGrid"></div>
+
+        <div class="funnel" aria-label="大会進行 8チームから優勝1チーム">
+          <strong>8</strong><i>→</i><strong>6</strong><i>→</i><strong>4</strong><i>→</i><strong>2</strong><i>→</i><strong>1</strong>
+          <small>TEAMS / 1ST / 2ND / FINAL / WINNER</small>
+        </div>
+
+        <div class="split-grid">
+          <article class="split-card">
+            <header><span>1ST突破 6</span><b>5 / 6 overlap</b></header>
+            <p class="overlap">Frozen disagreement</p>
+            <div class="difference">
+              <div><small>OLD ONLY</small><strong>Poland</strong></div>
+              <i>vs</i>
+              <div><small>NEW ONLY</small><strong>France</strong></div>
+            </div>
+            <p class="actual-row"><b>ACTUAL:</b> PolandもFranceも通過。共通選択のGermanyが敗退。</p>
+          </article>
+
+          <article class="split-card">
+            <header><span>2ND突破 4</span><b>2 / 4 overlap</b></header>
+            <p class="overlap">Frozen disagreement</p>
+            <div class="difference">
+              <div><small>OLD ONLY</small><strong>Germany / Poland</strong></div>
+              <i>vs</i>
+              <div><small>NEW ONLY</small><strong>日本U20 / Australia</strong></div>
+            </div>
+            <p class="actual-row"><b>ACTUAL:</b> 日本U20 / USA / 日本Red / Poland。OLDとNEWとも3/4。</p>
+          </article>
+
+          <article class="split-card">
+            <header><span>FINAL進出 2</span><b>1 / 2 overlap</b></header>
+            <p class="overlap">Frozen disagreement</p>
+            <div class="difference">
+              <div><small>OLD ONLY</small><strong>日本Red</strong></div>
+              <i>vs</i>
+              <div><small>NEW ONLY</small><strong>Australia</strong></div>
+            </div>
+            <p class="actual-row"><b>ACTUAL:</b> USA / 日本Red。Finalist setはOLDが2/2 exact。</p>
+          </article>
+
+          <article class="split-card">
+            <header><span>優勝 1</span><b>0 / 1 overlap</b></header>
+            <p class="overlap">Frozen disagreement</p>
+            <div class="difference">
+              <div><small>OLD</small><strong>日本Red</strong></div>
+              <i>vs</i>
+              <div><small>NEW</small><strong>Australia</strong></div>
+            </div>
+            <p class="actual-row"><b>ACTUAL:</b> USA。Winnerは両方MISS。</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -202,8 +473,12 @@
         <header class="section-title">
           <span>SECTION 02 / STAGE CHECK</span>
           <h2 id="review-title">OLD / NEW / ACTUAL</h2>
-          <p>順位表ではなく、各ステージで選んでいたチームの集合を比較する。Actualは放送後のSnapshotが確定するまで空欄のままにする。</p>
+          <p>
+            exact full rankingを予測していないため、各ステージでは「選んでいたチーム集合」を比較する。
+            Winnerだけはexact hit / missとして扱う。
+          </p>
         </header>
+
         <div class="review-shell">
           <div class="stage-tablist" role="tablist" aria-label="比較するステージ">
             <button class="stage-tab" id="tab-first" type="button" role="tab" aria-selected="true" aria-controls="panel-first" tabindex="0" data-stage="first">1ST</button>
@@ -216,23 +491,167 @@
       </div>
     </section>
 
-    <section class="section band" id="evaluation" aria-labelledby="evaluation-title">
+    <section class="section band" id="score" aria-labelledby="score-title">
       <div class="shell">
         <header class="section-title">
-          <span>SECTION 03 / VALIDATION</span>
-          <h2 id="evaluation-title">どこが当たり、<br>どこが外れた？</h2>
-          <p>ここはActual Snapshot確定後にだけ埋める。新しい総合Scoreや「モデルの勝敗」は追加せず、事前登録済みの観点で確認する。</p>
+          <span>SECTION 03 / OUTCOME SCORECARD</span>
+          <h2 id="score-title">どこまで<br>当たった？</h2>
+          <p>
+            PASS AではMechanismを使わず、予測とActualだけを比較した。
+            任意の重みを付けた総合点や「モデルの勝者」は作らない。
+          </p>
         </header>
-        <div class="placeholder-banner">ACTUAL SNAPSHOT確定後に評価</div>
-        <div class="evaluation-grid">
-          <article class="evaluation-card"><span>01</span><h3>1ST突破の<br>hit / miss</h3></article>
-          <article class="evaluation-card"><span>02</span><h3>2ND突破の<br>hit / miss</h3></article>
-          <article class="evaluation-card"><span>03</span><h3>FINAL進出チームの特定</h3></article>
-          <article class="evaluation-card"><span>04</span><h3>優勝チームの特定</h3></article>
-          <article class="evaluation-card"><span>05</span><h3>事前に固定した境界予測</h3></article>
-          <article class="evaluation-card"><span>06</span><h3>事前に挙げたリスク</h3></article>
-          <article class="evaluation-card"><span>07</span><h3>UNKNOWNの影響</h3></article>
-          <article class="evaluation-card"><span>08</span><h3>想定コースとの一致</h3></article>
+
+        <div class="score-grid">
+          <article class="score-card">
+            <h3><span>OLD MODEL</span>Outcome-only</h3>
+            <div class="metric-list">
+              <div class="metric"><p>1ST突破</p><strong class="hit">5 / 6</strong></div>
+              <div class="metric"><p>2ND突破</p><strong class="hit">3 / 4</strong></div>
+              <div class="metric"><p>Finalists</p><strong class="hit">2 / 2</strong></div>
+              <div class="metric"><p>Winner</p><strong class="miss">MISS</strong></div>
+            </div>
+            <p class="score-foot">FinalistsはUSA / 日本Redをexact。Winner予測の日本RedはActual runner-up。</p>
+          </article>
+
+          <article class="score-card new">
+            <h3><span>NEW FRAMEWORK SHADOW</span>Outcome-only</h3>
+            <div class="metric-list">
+              <div class="metric"><p>1ST突破</p><strong class="hit">5 / 6</strong></div>
+              <div class="metric"><p>2ND突破</p><strong class="hit">3 / 4</strong></div>
+              <div class="metric"><p>Finalists</p><strong>1 / 2</strong></div>
+              <div class="metric"><p>Winner</p><strong class="miss">MISS</strong></div>
+            </div>
+            <p class="score-foot">Franceの1ST、日本U20の2NDを捕捉。Australiaは2NDで敗退しFinalist/Winnerへ届かなかった。</p>
+          </article>
+        </div>
+
+        <div class="closing">
+          <strong>PASS A 結論</strong>
+          <p>
+            1STと2NDのhit countは同率。この一大会ではFinalist identificationはOLDがActualに近かった。
+            Exact Winnerは両方MISS。Accuracyとは別に、ExplainabilityとUNKNOWNの監査可能性はNEWの方が高かった。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="actual" aria-labelledby="actual-title">
+      <div class="shell">
+        <header class="section-title">
+          <span>SECTION 04 / ACTUAL RESULT</span>
+          <h2 id="actual-title">実際の勝負は<br>こうなった</h2>
+          <p>
+            3RDでは日本Redが410ptで首位。USAが400ptで続き、この2チームがFINALへ。
+            FINALはダニエル・ギルが41.32秒で森本裕介の49.23秒を上回った。
+          </p>
+        </header>
+
+        <div class="result-block">
+          <article class="result-panel">
+            <h3><small>3RD STAGE</small>4チームの得点</h3>
+            <div class="ranking">
+              <div class="rank-row"><span class="rank">01</span><strong>日本Red</strong><b>410 pt</b></div>
+              <div class="rank-row"><span class="rank">02</span><strong>USA</strong><b>400 pt</b></div>
+              <div class="rank-row"><span class="rank">03</span><strong>Poland</strong><b>230 pt</b></div>
+              <div class="rank-row"><span class="rank">04</span><strong>日本U20</strong><b>170 pt</b></div>
+            </div>
+          </article>
+
+          <article class="result-panel">
+            <h3><small>FINAL</small>USA vs 日本Red</h3>
+            <div class="final-duel">
+              <div class="duel-row winner">
+                <div class="team"><span>USA</span><span>CHAMPION</span></div>
+                <h4>ダニエル・ギル</h4>
+                <p>41.32 s</p>
+              </div>
+              <div class="duel-row">
+                <div class="team"><span>日本Red</span><span>RUNNER-UP</span></div>
+                <h4>森本裕介</h4>
+                <p>49.23 s</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="findings" aria-labelledby="findings-title">
+      <div class="shell">
+        <header class="section-title">
+          <span>SECTION 05 / WHAT HAPPENED</span>
+          <h2 id="findings-title">「外れた」を<br>一言で終わらせない</h2>
+          <p>
+            本番後に失敗・成功の仕方まで調査し、Observed Fact → Mechanism → Ability / Demand解釈を分離した。
+            一回の失敗を、そのまま「能力不足」とは扱っていない。
+          </p>
+        </header>
+
+        <div class="finding-grid">
+          <article class="finding-card">
+            <span class="tag">AUSTRALIA / 2ND</span>
+            <h3>1ST最速でも、15mでは通過できなかった</h3>
+            <p>
+              Ashlin Herbertは1STを<b>72.30秒で大会最速</b>。2NDも15m Spider Climbを完登したが13.54秒で5位。
+              一般的なSPEED不足ではなく、<b>15m-specific demandと1代表制</b>がActualの分岐になった。
+            </p>
+            <span class="conf">READING: COURSE_DEMAND_MISMATCH + REPRESENTATIVE EFFECT / MEDIUM</span>
+          </article>
+
+          <article class="finding-card">
+            <span class="tag">POLAND / CROSS-STAGE</span>
+            <h3>派手な一発より、4人の安定した積み上げ</h3>
+            <p>
+              1STでPawelとLeonがCLEAR、2NDでLeonが4位通過。
+              3RDでも4人全員が最低30pt以上を獲得し230pt。
+              Polandは<b>stageをまたいだteam depth</b>で残り続けた。
+            </p>
+            <span class="conf">READING: TEAM DEPTH SIGNAL / MEDIUM–HIGH</span>
+          </article>
+
+          <article class="finding-card">
+            <span class="tag">JAPAN U20 / 3RD</span>
+            <h3>1ST・2NDの強さと、3RDの難しさは別物だった</h3>
+            <p>
+              U20は1ST・2NDとも首位。しかし3RDでは170ptで4位。
+              失敗はFlying Bar、Sidewinder、Cliffなどの<b>dynamic transfer局面</b>に集中。
+              中島結太はCliffで明確なovershoot。単純なGRIP不足では説明できない。
+            </p>
+            <span class="conf">READING: TEAM-LEVEL DEMAND SHIFT / MEDIUM</span>
+          </article>
+
+          <article class="finding-card">
+            <span class="tag">USA / DEPTH + FINAL</span>
+            <h3>USAは「ギル1人のチーム」ではなかった</h3>
+            <p>
+              1STではDaniel Gilが失敗してもJosh / Vance / AddyがCLEAR。
+              3RDでは4人全員がCliff以上へ進み400pt。
+              FINALではGilが<b>区間移行を反復練習</b>し、終盤までpaceを維持した。
+            </p>
+            <span class="conf">READING: TEAM REDUNDANCY + FINAL-SPECIFIC PREPARATION / HIGH</span>
+          </article>
+
+          <article class="finding-card">
+            <span class="tag">JAPAN RED / 3RD</span>
+            <h3>3RDは「均等な4人」より、上位2人の深さが効いた</h3>
+            <p>
+              森本裕介150pt、山本良幸130pt。この2人だけで<b>280 / 410pt</b>。
+              NEWは日本Redのtop-end contribution shapeを過小集約した可能性が高い。
+            </p>
+            <span class="conf">READING: TEAM_AGGREGATION_MISS / HIGH</span>
+          </article>
+
+          <article class="finding-card">
+            <span class="tag">FINAL / USA vs RED</span>
+            <h3>8秒差を、そのまま「能力差」にしない</h3>
+            <p>
+              森本はFINAL中に<b>約5回のミス</b>があったと自己申告。
+              Gilにはspecific transition training、さらに3RD試技順による休息差候補もある。
+              49.23秒と41.32秒の差だけからlatent ability差を断定できない。
+            </p>
+            <span class="conf">READING: MULTI_FACTOR + EXECUTION VARIANCE / MEDIUM</span>
+          </article>
         </div>
       </div>
     </section>
@@ -240,133 +659,260 @@
     <section class="section" id="reasons" aria-labelledby="reasons-title">
       <div class="shell">
         <header class="section-title">
-          <span>SECTION 04 / ERROR ATTRIBUTION</span>
-          <h2 id="reasons-title">外れた理由を<br>分けて考える</h2>
-          <p>予測の外れを一括りにしない。どの層のズレだったのかを、Actualと公式条件が確定してから切り分ける。</p>
+          <span>SECTION 06 / ERROR ATTRIBUTION</span>
+          <h2 id="reasons-title">予測の外れを<br>どこに帰属する？</h2>
+          <p>
+            Athlete failureとForecast System errorは別物。
+            PASS Bでは、外れのrootをAbility、Demand、Team aggregation、代表制、Execution、UNKNOWNなどに分けた。
+          </p>
         </header>
-        <div class="placeholder-banner">ACTUAL SNAPSHOT確定後に評価</div>
+
         <div class="reason-grid">
-          <article class="reason-card"><span>ABILITY</span><h3>能力評価のズレ</h3><p>Ability estimation miss</p></article>
-          <article class="reason-card"><span>SCENARIO</span><h3>大会要求／想定シナリオのズレ</h3><p>Event Demand / scenario mismatch</p></article>
-          <article class="reason-card"><span>TEAM EFFECT</span><h3>チーム集計／代表選択の影響</h3><p>Team aggregation / representative-selection effect</p></article>
-          <article class="reason-card"><span>EVIDENCE</span><h3>UNKNOWN／根拠不足</h3><p>UNKNOWN / evidence insufficiency</p></article>
-          <article class="reason-card"><span>EXECUTION</span><h3>本番の番狂わせ</h3><p>Execution upset</p></article>
-          <article class="reason-card"><span>OFFICIAL DELTA</span><h3>公式ルール／コースとの差</h3><p>事前想定からの差分</p></article>
+          <article class="reason-card zero">
+            <span>ABILITY</span>
+            <h3>強く支持できるAbility estimation miss</h3>
+            <strong>0件</strong>
+            <p>一発の失敗を能力不足へ直結させず、代替説明が残る事例はAbility missにしなかった。</p>
+          </article>
+
+          <article class="reason-card">
+            <span>TEAM AGGREGATION</span>
+            <h3>Poland / 日本Red</h3>
+            <strong>NEW側の主要review candidate</strong>
+            <p>Polandのcross-stage depth、日本Redのtop-end 3RD contribution shapeを十分に拾えなかった。</p>
+          </article>
+
+          <article class="reason-card">
+            <span>EVENT DEMAND</span>
+            <h3>Australia 2ND</h3>
+            <strong>15m-specific fit</strong>
+            <p>Broad 1ST speedを、15m vertical climbの代表適性へそのまま延長できなかった。</p>
+          </article>
+
+          <article class="reason-card">
+            <span>REPRESENTATIVE</span>
+            <h3>U20 / Australia / France</h3>
+            <strong>1代表制の影響</strong>
+            <p>Team全体の強さと、1人だけが走る2NDの勝負を分けて扱う必要がある。</p>
+          </article>
+
+          <article class="reason-card">
+            <span>RULE / COURSE EXECUTION</span>
+            <h3>Germany</h3>
+            <strong>共通のmaterial miss</strong>
+            <p>DX×2、Screwdriver、Fishbone rule/path error。共通GRIP/POWER不足ではなく、動的精度とcourse/rule executionの集合。</p>
+          </article>
+
+          <article class="reason-card">
+            <span>ALEATORIC / EXECUTION</span>
+            <h3>Morimoto FINAL / Nakashima Cliff</h3>
+            <strong>単発実行変動を分離</strong>
+            <p>森本の複数ミス、中島のovershootなど、latent Abilityと分けて扱うべきActualがあった。</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section band" id="premises" aria-labelledby="premises-title">
+    <section class="section band" id="learning" aria-labelledby="learning-title">
       <div class="shell">
         <header class="section-title">
-          <span>SECTION 05 / TRANSPARENCY</span>
-          <h2 id="premises-title">検証の前提</h2>
-          <p>結果を知った後に予測を書き換えない。その前提を固定したうえで、一大会の事例として答え合わせを行う。</p>
+          <span>SECTION 07 / LEARNING</span>
+          <h2 id="learning-title">今回の大会から<br>何を持ち帰る？</h2>
+          <p>
+            一大会だけでFrameworkの優劣は決めない。
+            ただし、次回以降に検討する価値が高いTargeted Review Candidateは見つかった。
+          </p>
         </header>
+
+        <div class="learning-grid">
+          <article class="learning-card">
+            <h3>Stage-transition operator</h3>
+            <p>4人aggregate → 1代表 → 4人points sum → 1代表。ステージごとに評価単位が変わる。</p>
+            <small>PRIORITY HIGH</small>
+          </article>
+          <article class="learning-card">
+            <h3>15m-specific representative fit</h3>
+            <p>1STの速さと15m vertical climb speedは同じではない。代表1名制ではspecific fitが強く効く。</p>
+            <small>PRIORITY HIGH</small>
+          </article>
+          <article class="learning-card">
+            <h3>3RD contribution shape</h3>
+            <p>4人の均等なdepthだけでなく、森本＋山本良幸のようなtop-end anchorsが得点構造を支配する。</p>
+            <small>PRIORITY HIGH</small>
+          </article>
+          <article class="learning-card">
+            <h3>Japan-course rule familiarity</h3>
+            <p>Germanyのように、身体能力ではなくroute / rule / dynamic precisionで早期敗退するケースを分離する。</p>
+            <small>PRIORITY HIGH</small>
+          </article>
+          <article class="learning-card">
+            <h3>UNKNOWN decision handling</h3>
+            <p>UNKNOWNは低能力の証拠ではない。PolandやUSAでは、UNKNOWNの扱いがselection判断へ影響した可能性がある。</p>
+            <small>PRIORITY HIGH</small>
+          </article>
+          <article class="learning-card">
+            <h3>FINAL preparation / execution</h3>
+            <p>Specific preparation、当日のexecution、休息順などを、恒常的Abilityと同じ箱に入れない。</p>
+            <small>PRIORITY MEDIUM</small>
+          </article>
+        </div>
+
+        <div class="closing">
+          <strong>Framework disposition</strong>
+          <p>
+            TARGETED_REVIEW_CANDIDATES_IDENTIFIED。
+            1ST・2NDのhit countはOLD/NEW同率、Finalistsはこの一大会でOLDが近く、ExplainabilityとUNKNOWN auditabilityはNEWが強かった。
+            一大会から「OLDが上」「NEWが失敗」と一般化はしない。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="premises" aria-labelledby="premises-title">
+      <div class="shell">
+        <header class="section-title">
+          <span>SECTION 08 / TRANSPARENCY</span>
+          <h2 id="premises-title">検証の前提</h2>
+          <p>
+            結果を知った後にForecastを書き換えない。
+            事前FreezeとActual Snapshotを固定し、Mechanismは「なぜ」を説明するためだけに使った。
+          </p>
+        </header>
+
         <ul class="premise-list">
           <li>OLDとNEWはActual exposure前にFreeze済み。</li>
-          <li>Forecastは確率ではない。</li>
+          <li>Forecastは確率モデルではない。</li>
           <li>exact full rankingは予測していない。</li>
-          <li>1大会のみでFrameworkの一般的優位性を主張しない。</li>
-          <li>結果を見てFrozen Forecastを書き換えない。</li>
+          <li>Actual Result Snapshotは本番後に別途Freeze済み。</li>
+          <li>Mechanism EvidenceでPASS Aのhit / missを変更していない。</li>
+          <li>一大会のみでFrameworkの一般的優位性を主張しない。</li>
+          <li>Frozen Ability / Event Demand / Adapterは事後修正していない。</li>
+          <li>LOW / INDETERMINATE / HOLDは無理に確定情報へ格上げしない。</li>
         </ul>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="shell"><strong>SASUKE 本気考察</strong><p>非公式・個人制作のData Lab。現在のresult-reviewはACTUAL PENDINGの事前配置版です。検索対象外・公開導線なし。</p></div>
+    <div class="shell">
+      <strong>SASUKE 本気考察</strong>
+      <p>
+        非公式・個人制作のData Lab。放送前のForecastと放送後のActualを分離し、一大会のProspective Case Studyとして検証しています。
+        このファイルはHuman Review用のnoindex版です。
+      </p>
+    </div>
   </footer>
+
   <button id="back-top" type="button" aria-label="ページ上部へ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
   <script>
     const forecastData=Object.freeze({
       old:Object.freeze({
-        label:'OLD MODEL',
         first:['日本Red','Australia','Poland','Germany','USA','日本U20'],
         second:['日本Red','USA','Germany','Poland'],
         finalists:['USA','日本Red'],
         winner:['日本Red']
       }),
       new:Object.freeze({
-        label:'NEW FRAMEWORK',
         first:['日本Red','日本U20','USA','Germany','Australia','France'],
         second:['日本Red','日本U20','USA','Australia'],
         finalists:['USA','Australia'],
         winner:['Australia']
       }),
-      actual:null,
+      actual:Object.freeze({
+        first:['日本U20','Australia','USA','日本Red','France','Poland'],
+        second:['日本U20','USA','日本Red','Poland'],
+        finalists:['USA','日本Red'],
+        winner:['USA']
+      }),
       stages:Object.freeze([
-        Object.freeze({key:'first',short:'1ST',title:'1ST突破 6',overlap:'5 / 6 overlap',oldOnly:'Poland',newOnly:'France'}),
-        Object.freeze({key:'second',short:'2ND',title:'2ND突破 4',overlap:'2 / 4 overlap',oldOnly:'Germany / Poland',newOnly:'日本U20 / Australia'}),
-        Object.freeze({key:'finalists',short:'FINAL',title:'FINAL進出 2',overlap:'1 / 2 overlap',oldOnly:'日本Red',newOnly:'Australia'}),
-        Object.freeze({key:'winner',short:'WINNER',title:'優勝 1',overlap:'0 / 1 overlap',oldOnly:'日本Red',newOnly:'Australia'})
+        Object.freeze({key:'first',short:'1ST',title:'1ST突破 6',note:'OLD 5/6 / NEW 5/6'}),
+        Object.freeze({key:'second',short:'2ND',title:'2ND突破 4',note:'OLD 3/4 / NEW 3/4'}),
+        Object.freeze({key:'finalists',short:'FINAL',title:'FINAL進出 2',note:'OLD 2/2 exact / NEW 1/2'}),
+        Object.freeze({key:'winner',short:'WINNER',title:'優勝 1',note:'OLD MISS / NEW MISS'})
       ])
     });
 
-    const heroCompare=document.getElementById('heroCompare');
-    const splitGrid=document.getElementById('splitGrid');
     const stagePanels=document.getElementById('stagePanels');
     const stageTabs=[...document.querySelectorAll('.stage-tab')];
 
-    function makeCard(className,label,status,winner,finalists){
-      const article=document.createElement('article');article.className=`hero-card ${className}`;
-      const head=document.createElement('div');head.className='card-label';
-      const name=document.createElement('span');name.textContent=label;
-      const state=document.createElement('small');state.textContent=status;head.append(name,state);
-      const title=document.createElement('h2');title.textContent=winner;
-      const detail=document.createElement('p');
-      const lead=document.createTextNode('Finalists: ');const strong=document.createElement('b');strong.textContent=finalists;
-      detail.append(lead,strong);article.append(head,title,detail);return article;
-    }
-
-    heroCompare.append(
-      makeCard('old','OLD MODEL','FROZEN',forecastData.old.winner[0],forecastData.old.finalists.join(' / ')),
-      makeCard('new','NEW FRAMEWORK','FROZEN',forecastData.new.winner[0],forecastData.new.finalists.join(' / ')),
-      makeCard('actual','ACTUAL','放送後に確定','—','—')
-    );
-
-    forecastData.stages.forEach(stage=>{
-      const article=document.createElement('article');article.className='split-card';
-      const header=document.createElement('header');
-      const title=document.createElement('span');title.textContent=stage.title;
-      const overlap=document.createElement('b');overlap.textContent=stage.overlap;header.append(title,overlap);
-      const summary=document.createElement('p');summary.className='overlap';summary.textContent='Frozen disagreement';
-      const difference=document.createElement('div');difference.className='difference';
-      const old=document.createElement('div');old.innerHTML='<small>OLD ONLY</small>';const oldValue=document.createElement('strong');oldValue.textContent=stage.oldOnly;old.append(oldValue);
-      const vs=document.createElement('i');vs.textContent='vs';
-      const next=document.createElement('div');next.innerHTML='<small>NEW ONLY</small>';const newValue=document.createElement('strong');newValue.textContent=stage.newOnly;next.append(newValue);
-      difference.append(old,vs,next);
-      const pending=document.createElement('p');pending.className='pending-row';pending.textContent='ACTUAL / 放送後に確定';
-      article.append(header,summary,difference,pending);splitGrid.append(article);
-    });
-
     function appendChips(container,values){
-      values.forEach(value=>{const chip=document.createElement('span');chip.className='team-chip';chip.textContent=value;container.append(chip);});
-    }
-    forecastData.stages.forEach((stage,index)=>{
-      const panel=document.createElement('section');panel.className='stage-panel';panel.id=`panel-${stage.key}`;
-      panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',`tab-${stage.key}`);panel.tabIndex=0;panel.hidden=index!==0;
-      const heading=document.createElement('div');heading.className='stage-heading';
-      const h3=document.createElement('h3');h3.textContent=stage.title;
-      const note=document.createElement('p');note.textContent='SET MEMBERSHIP / NO EXACT RANKING';heading.append(h3,note);
-      const cards=document.createElement('div');cards.className='comparison-cards';
-      [['old','OLD MODEL'],['new','NEW FRAMEWORK']].forEach(([key,label])=>{
-        const card=document.createElement('article');card.className=`forecast-card ${key}`;
-        const h4=document.createElement('h4');h4.textContent=label;
-        const chips=document.createElement('div');chips.className='chip-list';appendChips(chips,forecastData[key][stage.key]);
-        card.append(h4,chips);cards.append(card);
+      values.forEach(value=>{
+        const chip=document.createElement('span');
+        chip.className='team-chip';
+        chip.textContent=value;
+        container.append(chip);
       });
-      const actual=document.createElement('article');actual.className='forecast-card actual';
-      const actualTitle=document.createElement('h4');actualTitle.textContent='ACTUAL';
-      const actualValue=document.createElement('div');actualValue.className='pending-value';actualValue.textContent='—　放送後に確定';actual.append(actualTitle,actualValue);cards.append(actual);
-      panel.append(heading,cards);stagePanels.append(panel);
+    }
+
+    forecastData.stages.forEach((stage,index)=>{
+      const panel=document.createElement('section');
+      panel.className='stage-panel';
+      panel.id=`panel-${stage.key}`;
+      panel.setAttribute('role','tabpanel');
+      panel.setAttribute('aria-labelledby',`tab-${stage.key}`);
+      panel.tabIndex=0;
+      panel.hidden=index!==0;
+
+      const heading=document.createElement('div');
+      heading.className='stage-heading';
+      const h3=document.createElement('h3');
+      h3.textContent=stage.title;
+      const note=document.createElement('p');
+      note.textContent=stage.note;
+      heading.append(h3,note);
+
+      const cards=document.createElement('div');
+      cards.className='comparison-cards';
+
+      [['old','OLD MODEL'],['new','NEW FRAMEWORK'],['actual','ACTUAL']].forEach(([key,label])=>{
+        const card=document.createElement('article');
+        card.className=`forecast-card ${key}`;
+        const h4=document.createElement('h4');
+        h4.textContent=label;
+
+        if(stage.key==='winner'){
+          const winner=document.createElement('div');
+          winner.className='winner-chip';
+          winner.textContent=forecastData[key][stage.key][0];
+          card.append(h4,winner);
+        }else{
+          const chips=document.createElement('div');
+          chips.className='chip-list';
+          appendChips(chips,forecastData[key][stage.key]);
+          card.append(h4,chips);
+        }
+        cards.append(card);
+      });
+
+      const stageNote=document.createElement('p');
+      stageNote.className='stage-note';
+      if(stage.key==='first'){
+        stageNote.textContent='共通missはGermany。OLD固有正解はPoland、NEW固有正解はFrance。';
+      }else if(stage.key==='second'){
+        stageNote.textContent='OLDのGermany FPは1ST missの伝播。NEWのPoland FNも1ST missの伝播。root errorとして二重計上しない。';
+      }else if(stage.key==='finalists'){
+        stageNote.textContent='ActualはUSA / 日本Red。OLDがexact set。NEWはUSAのみ的中。';
+      }else{
+        stageNote.textContent='Actual WinnerはUSA。Winnerにpartial creditは付けない。';
+      }
+
+      panel.append(heading,cards,stageNote);
+      stagePanels.append(panel);
     });
 
     function activateStage(key,moveFocus=false){
-      stageTabs.forEach(tab=>{const active=tab.dataset.stage===key;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;if(active&&moveFocus)tab.focus();});
-      document.querySelectorAll('.stage-panel').forEach(panel=>{panel.hidden=panel.id!==`panel-${key}`;});
+      stageTabs.forEach(tab=>{
+        const active=tab.dataset.stage===key;
+        tab.setAttribute('aria-selected',String(active));
+        tab.tabIndex=active?0:-1;
+        if(active&&moveFocus)tab.focus();
+      });
+      document.querySelectorAll('.stage-panel').forEach(panel=>{
+        panel.hidden=panel.id!==`panel-${key}`;
+      });
     }
+
     stageTabs.forEach((tab,index)=>{
       tab.addEventListener('click',()=>activateStage(tab.dataset.stage));
       tab.addEventListener('keydown',event=>{
@@ -376,19 +922,37 @@
         else if(event.key==='Home')next=0;
         else if(event.key==='End')next=stageTabs.length-1;
         else return;
-        event.preventDefault();activateStage(stageTabs[next].dataset.stage,true);
+        event.preventDefault();
+        activateStage(stageTabs[next].dataset.stage,true);
       });
     });
 
     const menuButton=document.getElementById('menuButton');
     const mobileNav=document.getElementById('mobileNav');
     if(menuButton&&mobileNav){
-      menuButton.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});
-      mobileNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{mobileNav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));
-      document.addEventListener('keydown',event=>{if(event.key==='Escape'){mobileNav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.focus();}});
+      menuButton.addEventListener('click',()=>{
+        const open=mobileNav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded',String(open));
+      });
+      mobileNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+        mobileNav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded','false');
+      }));
+      document.addEventListener('keydown',event=>{
+        if(event.key==='Escape'){
+          mobileNav.classList.remove('open');
+          menuButton.setAttribute('aria-expanded','false');
+          menuButton.focus();
+        }
+      });
     }
+
     const backTop=document.getElementById('back-top');
-    if(backTop){const updateBackTop=()=>backTop.classList.toggle('visible',window.scrollY>500);updateBackTop();window.addEventListener('scroll',updateBackTop,{passive:true});}
+    if(backTop){
+      const updateBackTop=()=>backTop.classList.toggle('visible',window.scrollY>500);
+      updateBackTop();
+      window.addEventListener('scroll',updateBackTop,{passive:true});
+    }
   </script>
 </body>
 </html>
