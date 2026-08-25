@@ -174,6 +174,41 @@ body.intro-running{overflow:hidden}
 .page-card h3 em{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;min-height:28px;padding:0 12px;border:1px solid rgba(255,78,91,.58);color:#ff7b85;background:rgba(255,78,91,.055);font-size:11px;font-style:normal;font-weight:800;letter-spacing:.08em}
 .page-card p{max-width:720px;margin:0;color:#9fb8c4;font-size:12.5px;line-height:1.8}
 
+/* WORLD CUP 2026 combined card — only this card is changed */
+.page-card-hub:after{display:none}
+.page-card-hub:hover{transform:none}
+.page-card-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:22px}
+.page-card-action{
+  min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 14px;border:1px solid rgba(49,216,239,.25);
+  background:rgba(3,13,20,.42);color:#c8dbe4;
+  font-size:11px;font-weight:850;letter-spacing:.02em;
+  transition:border-color .18s,background .18s,color .18s
+}
+.page-card-action span{min-width:0}
+.page-card-action small{
+  display:block;margin-bottom:4px;color:#6f8b99;
+  font:800 7.5px ui-monospace,monospace;letter-spacing:.11em
+}
+.page-card-action b{display:block;font-size:12px;line-height:1.35}
+.page-card-action i{color:var(--cyan2);font-style:normal;font-size:18px;line-height:1}
+.page-card-action.primary{
+  border-color:rgba(49,216,239,.5);
+  background:rgba(49,216,239,.06);
+  color:#eefbff
+}
+.page-card-action.secondary{
+  border-color:rgba(255,78,91,.38);
+  background:rgba(255,78,91,.035)
+}
+.page-card-action.secondary i{color:#ff7b85}
+.page-card-action:hover,.page-card-action:focus-visible{
+  border-color:var(--cyan);background:rgba(49,216,239,.09);color:#fff;outline:none
+}
+.page-card-action.secondary:hover,.page-card-action.secondary:focus-visible{
+  border-color:#ff7b85;background:rgba(255,78,91,.065)
+}
+
 /* ABOUT */
 .about{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
 .about-main,.about-side{padding:27px 28px;border:1px solid rgba(49,216,239,.24);background:linear-gradient(145deg,rgba(10,27,40,.84),rgba(5,16,24,.78))}
@@ -254,6 +289,7 @@ body.intro-running{overflow:hidden}
   #back-top{right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom))}
 }
 @media(max-width:480px){
+  .page-card-actions{grid-template-columns:1fr}
   .boot-head{height:46px;padding:0 13px;font-size:7px}.boot-head b{display:none}
   .boot-console{inset:54px 12px 56px}.boot-layout{gap:15px;padding:20px 12px 74px}
   .boot-emblem{width:min(210px,58vw)}.boot-brand small{font-size:6px}.boot-brand strong{font-size:23px}
@@ -389,13 +425,21 @@ main,.hero,.hero-grid,.shell{min-width:0;max-width:100%}
       <div><span>02 / DATA LAB</span><h2>詳細分析・恒久参照</h2></div>
       <p>記事では載せきれない詳細分析や、大会ごとのデータ・考察を残しています。公開時点の分析を、あとから辿れる形で保管するSASUKE本気考察のWebラボです。</p>
     </div>
-    <a class="page-card reveal" href="world-cup-2026/pre-analysis/index.html">
+<article class="page-card page-card-hub reveal">
       <div>
-        <small>2026.08.03 / PRE-EVENT ANALYSIS</small>
-        <h3>SASUKE WORLD CUP 2026<br><em>詳細版</em></h3>
-        <p>全8チーム・32選手の戦力、代表予想、ステージごとの勝ち筋を詳細分析。</p>
+        <small>2026 / SASUKE WORLD CUP</small>
+        <h3>SASUKE WORLD CUP 2026</h3>
+        <p>放送前の事前考察と、放送後の結果検証をまとめて参照できます。</p>
+        <div class="page-card-actions" aria-label="SASUKE WORLD CUP 2026の公開ページ">
+          <a class="page-card-action primary" href="world-cup-2026/result-review/index.html">
+            <span><small>2026.08.25 / POST-EVENT</small><b>結果検証を見る</b></span><i aria-hidden="true">→</i>
+          </a>
+          <a class="page-card-action secondary" href="world-cup-2026/pre-analysis/index.html">
+            <span><small>2026.08.03 / PRE-EVENT</small><b>事前予想を見る</b></span><i aria-hidden="true">→</i>
+          </a>
+        </div>
       </div>
-    </a>
+    </article>
     <a class="page-card reveal" href="idol-qualifier-2026/pre-analysis/index.html" style="margin-top:14px">
       <div>
         <small>2026.08.15 / VIEWING GUIDE / PRE-EVENT</small>
